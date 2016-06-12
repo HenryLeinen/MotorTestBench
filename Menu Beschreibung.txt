@@ -1,0 +1,36 @@
+Status Zeile:      >SD<  >USB<  >BAT< 			(Wird immer angezeigt und zeigt ob die Geräte detektiert sind)
+Menu Zeile:      >File< Calibration Live Sequencer ESC_Editor	(Kann gescrollt werden, damit kann das laufende Unterprogramm bestimmt werden)
+Anwendungszeile 1
+Anwendungszeile 2
+
+Unterprogramm 1: Datei system, Speichern der Defaults, Laden der Defaults, Benennen des Dateinamens für die Messungen
+Unterprogramm 2: Calibration, Kalibrierung des Weight sensors, Display Kontrast, 
+Unterprogramm 3: Live Measurement, Ändern des ESC Wertes und aufzeichnen der Messwerte
+Unterprogramm 4: Sequencer, Abfahren von Messkurven
+
+Rotary Encoder ist Eingabe mit Button.
+
+Auf oberster Ebene kann man mit dem Encoder die Menu Zeile durchscrollen und mit dem Button das gewünschte Unterprogramm ausführen.
+Während man durch die Menu Zeile navigiert, werden in Anwendungszeile 1 und 2 Erklärungen zum aktuell ausgewählten Programm angezeigt.
+
+
+Unterprogramm 1: 
+Menu Zeile:		>LoadCal< SaveCal SaveData Return
+Anwendungszeile 1:  Dateiname
+Anwendungszeile 2: Leer
+
+Menu Eintrag LoadCal:
+Anwendungszeile 1: In Anwendungszeile 1 werden alle verfügbaren Dateinamen angezeigt, die auf der SD Karte die Endung .cal haben.
+Bei Button press auf ein existieres File, wird in Anwendungszeile 2 die Rückfrage angezeigt, ob die aktuellen Daten wirklich überschrieben werden sollen.
+Anwendungszeile 2: Load ?  Yes >No<
+Bei Auswahl YES werden die Daten geladen und das Programm gibt für 1 Sekunde das Feedback ob das laden erfolgreich war oder nicht.
+Bei Auswahl NO werden keine Daten geladen und das Programm gibt für 1 Sekdunde das Feedback, dass das laden gecancelt wurde.
+Danach spring das Programm wieder in das Haupt menu.
+
+Menu Eintrag SaveCal:
+Anwendungszeile 1: In Anwendungszeile 1 werden alle verfügbaren Dateinamen angezeigt, die auf der SD Karte die Endung .cal haben. Am Schluss wird noch >NewFile< hinzugefügt.
+Bei Button press auf bestehendes File, wird in Anwendungszele 2 die Rückfrage angezeigt, ob die gewählte Detei wirklich überschieben werden soll.
+Anwendungszeile 2: Overwrite ? YES >NO<
+Bei Auswahl YES werden die Kalibrierdaten in das gewählte File geschrieben. Das File wir also überschriben. Danach gibt das Programm für 1 Sekunde das Feedback dass das Schreiben erfolgreich war.
+Bei Auswahl NO werden keine Daten geschrieben und das Programm gibt für 1 Sekunde das Feedback, dass das schreiben gecancelt wurde.
+Wird 
