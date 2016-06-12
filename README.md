@@ -1,1 +1,1 @@
-# MotorTestBench
+# MotorTestBench## DescriptionThis program controls an **electric brushless motor** using an **ESC** (*electronic speed control*) via **PPM/PWM** signal. At the same time a few sensors are measured in order to characterize the motor for *power*, *thrust* and *rotation speed*.Target processor: **STM32F405(RGT)**
