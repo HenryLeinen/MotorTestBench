@@ -19,6 +19,9 @@ void systemSettingsInit(void) {
 	systemData.rpm     = 0;
 	systemData.thrust	 = 0.0f;
 	systemData.gas		= 0;
+	systemData.thrust_raw = 0;
+	systemData.measure_offsets = true;
+
 
 	systemData.sd_card_attached = false;
 	systemData.battery_attached = false;
@@ -26,7 +29,7 @@ void systemSettingsInit(void) {
 
 
 //	systemSettings.thrust_calibration_factor	= 445.0f;	// in digits per gramm [10kg weight sensor]
-	systemSettings.thrust_calibration_factorN	= 5015;
+	systemSettings.thrust_calibration_factorN	= 501500;
 	systemSettings.thrust_calibration_divisorN	= 1000;
 	systemSettings.thrust_calibration_factor	= (float)systemSettings.thrust_calibration_factorN / (float)systemSettings.thrust_calibration_divisorN;	//	in digits per gramm [5kg weight sensor]
 	systemSettings.display_contrast				= 25;

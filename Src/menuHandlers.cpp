@@ -278,44 +278,10 @@ bool menuCbkSaveData(bool btnDown, int16_t scrollTicks) {
 	return false;
 }
 
-bool menuCbkCalibWeight(bool btnDown, int16_t scrollTicks) {
-	static bool btnDownOld = false;
-	lcdPutsAt(3, 0, (char*)"ESC Edit Function   ");
-	if (btnDown == true)
-		btnDownOld = true;
-	else
-		if (btnDownOld) {
-			btnDownOld = false;
-			return true;
-		}
-	return false;
-}
 
-bool menuCbkCalibDisplay(bool btnDown, int16_t scrollTicks) {
-	static bool btnDownOld = false;
-	lcdPutsAt(3, 0, (char*)"ESC Edit Function   ");
-	if (btnDown == true)
-		btnDownOld = true;
-	else
-		if (btnDownOld) {
-			btnDownOld = false;
-			return true;
-		}
-	return false;
-}
 
-bool menuCbkCalibCurrent(bool btnDown, int16_t scrollTicks) {
-	static bool btnDownOld = false;
-	lcdPutsAt(3, 0, (char*)"ESC Edit Function   ");
-	if (btnDown == true)
-		btnDownOld = true;
-	else
-		if (btnDownOld) {
-			btnDownOld = false;
-			return true;
-		}
-	return false;
-}
+
+
 
 bool menuCbkCalibRPM(bool btnDown, int16_t scrollTicks) {
 	static bool btnDownOld = false;

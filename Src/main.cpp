@@ -85,6 +85,7 @@ void processSensors(void) {
 
 	//	Read the thrust sensor
 	thrust_sensor.readSensor(thrust_actual, ChannelA_Gain128, false);
+	systemData.thrust_raw = (int32_t)thrust_actual;
 
 	//	Get new RPM value
 //	systemData.rpm = (int16_t)rpmGetRPSValue();
@@ -98,7 +99,7 @@ void processSensors(void) {
 	systemData.power = systemData.voltage * systemData.current;
 
 	//	Process thrust and power sensor values in case the system shall be idle
-	if (systemData.gas == 0) {
+	if (systemData.measure_offsets) {
 		//	Reset all thrust offset and value
 		systemSettings.thrust_offset = thrust_actual;
 		powerSenseGetNewOffset();

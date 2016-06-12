@@ -87,7 +87,6 @@ void displayMenu::processMenu(bool buttonPressState, int16_t scrollDir) {
 					m_nMenuOffsetOnScreen++;
 				m_bDirty = true;
 			}
-			trace_printf("CurrentMenuItem = %d, MenuOffset = %d\n", m_nCurrentMenuItem, m_nMenuOffsetOnScreen);
 			oldButtonPress = false;
 		} else if (scrollDir < 0) {
 			//	Check if we can scroll left
@@ -100,7 +99,6 @@ void displayMenu::processMenu(bool buttonPressState, int16_t scrollDir) {
 					m_nMenuOffsetOnScreen--;
 				m_bDirty = true;
 			}
-			trace_printf("CurrentMenuItem = %d, MenuOffset = %d\n", m_nCurrentMenuItem, m_nMenuOffsetOnScreen);
 			oldButtonPress = false;
 		} else if (buttonPressState ){
 			oldButtonPress = true;

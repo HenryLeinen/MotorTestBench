@@ -19,6 +19,8 @@ typedef struct {
 	int16_t		rpm;			//	in rotations per second
 	float		thrust;			//	in gramms
 	int16_t		gas;			//	gas in percent (control of ESC)
+	int32_t		thrust_raw;		//	raw value of thurst sensor
+	bool		measure_offsets;//	will be true as long as gas is 0, in order to continuously measure any offsets
 
 	//	Devices attached
 	bool		sd_card_attached;	//	If SD card is attached
