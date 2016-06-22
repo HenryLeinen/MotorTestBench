@@ -296,19 +296,6 @@ bool menuCbkCalibRPM(bool btnDown, int16_t scrollTicks) {
 	return false;
 }
 
-bool menuCbkManualControl(bool btnDown, int16_t scrollTicks) {
-	static bool btnDownOld = false;
-	lcdPutsAt(3, 0, (char*)"ESC Edit Function   ");
-	if (btnDown == true)
-		btnDownOld = true;
-	else
-		if (btnDownOld) {
-			btnDownOld = false;
-			return true;
-		}
-	return false;
-}
-
 bool menuCbkAutoControl(bool btnDown, int16_t scrollTicks) {
 	static bool btnDownOld = false;
 	lcdPutsAt(3, 0, (char*)"ESC Edit Function   ");

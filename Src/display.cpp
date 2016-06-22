@@ -191,24 +191,3 @@ void displayMenu::drawMenu(void) {
 	}
 }
 
-#if 0
-void displayStatusPage(bool bWithClear) {
-	char buffer[21];
-	uint16_t volt = (uint16_t)(systemData.voltage*100.0f), curr = (uint16_t)(systemData.current*100.f), powr = (uint16_t)(systemData.power*100.f);
-	if (bWithClear)
-		lcdClear();
-	sprintf(buffer, "V= %2d.%02dV", volt/100, volt%100);
-	displayLineAt(0, 0, buffer);
-	sprintf(buffer, "I= %2d.%02dA", curr/100, curr%100);
-	displayLineAt(0, 1, buffer);
-	sprintf(buffer, "f=%5dHz", systemData.rpm);
-	displayLineAt(11, 0, buffer);
-	sprintf(buffer, "T=%5dg", (uint16_t)systemData.thrust);
-	displayLineAt(11, 1, buffer);
-	sprintf(buffer, "P=%3d.%02dW", powr/100, powr%100);
-	displayLineAt(0, 2, buffer);
-	sprintf(buffer, "ESC= % 3d%%", systemData.gas);
-	displayLineAt(11, 2, buffer);
-}
-
-#endif
